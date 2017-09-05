@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author smallclover
@@ -23,10 +25,13 @@ public class AnalyzeUrlController extends HttpServlet{
 
         String url = req.getParameter("url");
         String avNum = url.substring(url.indexOf("av"), url.length() - 1);
-        String picUrl = GetPicture.getPictureByAvNum(avNum);
+/*        String regex = "/(\\w+):\\/\\/([^/:]+)(:\\d*)?([^# ]*)/";
+        String[] arr = url.split(regex);
+        String picUrl = GetPicture.getPictureByAvNum(arr[arr.length - 1]);*/
         //resp.sendRedirect(picUrl);//出现403禁止访问
+        String picUrl = GetPicture.getPictureByAvNum(avNum);
         PrintWriter pw = resp.getWriter();
-        pw.println("<strong>" + picUrl+ "</strong>");
+        pw.println(picUrl);
     }
 
     @Override
