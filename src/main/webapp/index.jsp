@@ -18,6 +18,7 @@
 </form>
 <div class="content" id="content">
     <img id="picUrl" src="#" alt="封面地址"/>
+    <a id="picUrl2" href="#" rel="noreferrer">封面地址</a>
 </div>
 <script type="text/javascript">
     $("#submit").click(function () {
@@ -27,6 +28,7 @@
             data:{"url":$("#url").val()},//不用val()获取值会陷入死循环，具体表现为不断的发送请求
             success:function (msg) {
                 $("#picUrl").attr("src", msg);
+                $("#picUrl2").attr("href", msg);
             }
         });
     });

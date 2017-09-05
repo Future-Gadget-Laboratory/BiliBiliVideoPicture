@@ -30,6 +30,7 @@ public class AnalyzeUrlController extends HttpServlet{
         String picUrl = GetPicture.getPictureByAvNum(arr[arr.length - 1]);*/
         //resp.sendRedirect(picUrl);//出现403禁止访问
         String picUrl = GetPicture.getPictureByAvNum(avNum);
+        resp.setHeader("referer","");
         PrintWriter pw = resp.getWriter();
         pw.println(picUrl);
     }
