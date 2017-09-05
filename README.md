@@ -13,6 +13,6 @@ Tools：Intellij idea 2017
 Other：Bootstrap+Jquery
 
 # 参与人员
-** [真帆](https://github.com/minazukie)
+[真帆](https://github.com/minazukie)
 </br>
-** [冈部](https://github.com/smallclover)
+[冈部](https://github.com/smallclover)
