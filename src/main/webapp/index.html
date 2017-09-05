@@ -6,89 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>BiliBiliVideoPicture</title>
     <link rel="stylesheet" href="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.css">
+    <link rel="stylesheet" href="css/index.css">
     <!--[if lt IE 9]>
     <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 </head>
-<style>
-    @media screen and (min-width: 992px){
-        .field {
-            width: 70%;
-        }
-    }
-    @media screen and (max-width: 991px){
-        .field {
-            width: 100%;
-        }
-    }
-    body {
-        background-image: url('images/bg.gif');
-    }
-    a {
-        position: relative;
-        top: 5px;
-    }
-    button {
-        position: relative;
-        top: 30px;
-    }
-    img {
-        margin-bottom: 20px;
-    }
-    .search {
-        position: relative;
-        top: 6em;
-    }
-</style>
 <body>
-<div class="ui container search">
-    <div class="ui two column centered grid">
-        <div class="column">
-            <img src="images/未来道具研究所-2.png" width="100%" alt="">
+    <div class="ui container search">
+        <div class="ui two column centered grid">
+            <div class="column">
+                <img src="images/未来道具研究所-2.png" width="100%" alt="">
+            </div>
         </div>
-    </div>
-    <div class="ui huge centered grid form">
-        <div class="field">
-            <input placeholder="请将视频url地址复制于此">
-            <div class="ui info hidden message">
+        <div class="ui huge centered grid form">
+            <div class="field">
+                <input placeholder="请将视频url地址复制于此">
+                <div class="ui info hidden message">
                     <i class="close icon"></i>
-                    <div class="header">检索完毕</div>
-                    <a href="###">封面图</a>
-                  </div>
-            <button class="ui basic black huge right floated button">Go!</button>
+                    <div class="header"></div>
+                    <a href="###"></a>
+                </div>
+                <button class="ui basic black huge right floated button">Go!</button>
+            </div>
         </div>
     </div>
-</div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://cdn.bootcss.com/semantic-ui/2.2.13/semantic.min.js"></script>
-<script type="text/javascript">
-    $('i').attr('onClick', "$('.message').transition('swing down');");
-    $("button").click(function () {
-        $('.form').addClass('loading');
-        $.ajax({
-            type: "POST",
-            url: "Analyze.action",
-            data: {"url": $("#url").val()}, // 不用val()获取值会陷入死循环，具体表现为不断的发送请求
-            success: function (msg) {
-                $('.header').html('成功');
-                $('a').html('封面图');
-                $('.form').removeClass('loading');  
-                $('.message').removeClass('error');
-                $('.message').addClass('info');              
-                $("a").attr("href", msg);
-                $('.message').transition('swing down');
-            },
-            error: function(e) {
-                $('.header').html('发生错误');
-                $('a').html('请检查网络连接');
-                $('.form').removeClass('loading');  
-                $('.message').removeClass('info');
-                $('.message').addClass('error');
-                $('.message').transition('swing down');
-            }
-        });
-    });
-</script>
+<script src="js/index.js"></script>
 </body>
 </html>

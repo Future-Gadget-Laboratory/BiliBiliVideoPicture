@@ -1,0 +1,28 @@
+@media screen and (min-width: 992px){
+    .field {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 991px){
+    .field {
+        width: 100%;
+    }
+}
+body {
+    background-image: url('../images/bg.gif');
+}
+a {
+    position: relative;
+    top: 5px;
+}
+button {
+    position: relative;
+    top: 30px;
+}
+img {
+    margin-bottom: 20px;
+}
+.search {
+    position: relative;
+    top: 6em;
+}
