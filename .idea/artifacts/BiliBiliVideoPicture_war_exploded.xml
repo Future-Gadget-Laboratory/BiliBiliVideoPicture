@@ -8,7 +8,6 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: org.jsoup:jsoup:1.10.3" />
-          <element id="library" level="project" name="Maven: javax.servlet:jstl:1.2" />
         </element>
       </element>
       <element id="directory" name="META-INF">
