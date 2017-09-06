@@ -7,17 +7,17 @@ $("button").click(function () {
         data: {"url": $("input").val()}, // 不用val()获取值会陷入死循环，具体表现为不断的发送请求
         success: function (msg) {
             $('.header').html('成功');
-            $('a').html('封面图');
+            $('#picUrl').html('封面图');
             $('.form').removeClass('loading');  
             $('.message').removeClass('error');
             $('.message').addClass('info');              
-            $("a").attr("href", msg);
+            $("#picUrl").attr("href", msg);
             $('.message').transition('swing down');
             $('button').attr('disabled', 'disabled');
         },
         error: function(e) {
             $('.header').html('发生错误');
-            $('a').html('请检查网络连接');
+            $('#picUrl').html('请检查网络连接');
             $('.form').removeClass('loading');  
             $('.message').removeClass('info');
             $('.message').addClass('error');

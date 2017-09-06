@@ -26,3 +26,6 @@ img {
     position: relative;
     top: 6em;
 }
+.header {
+    padding: 20px;
+}
