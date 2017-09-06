@@ -5,14 +5,13 @@
 Version 1.0.0
 
 # 部署环境
-OS：Windows10
-Server：Tomcat7.x
-Java Version：Java8
-Maven Version：3.3.9
-Tools：Intellij idea 2017
-Other：Bootstrap+Jquery
+OS：Windows10</br>
+Server：Tomcat7.x</br>
+Java Version：Java8</br>
+Maven Version：3.3.9</br>
+Tools：Intellij idea 2017</br>
+Other：Bootstrap+Jquery</br>
 
-# 参与人员
-[真帆](https://github.com/minazukie)
-</br>
+# 无关人员（滑稽）
+[真帆](https://github.com/minazukie)</br>
 [冈部](https://github.com/smallclover)
